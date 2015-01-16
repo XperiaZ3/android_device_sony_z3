@@ -32,6 +32,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libstagefrighthw \
+    libOmxCore \
+    libmm-omxcore \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc
+
 # Device specific init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
@@ -51,6 +61,12 @@ PRODUCT_COPY_FILES += \
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+
+# Radio
+ifneq ($(BOARD_HAVE_RADIO),false)
+    DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-radio
+    $(call inherit-product, $(COMMON_PATH)/radio.mk)
+endif
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/z3/z3-vendor.mk)

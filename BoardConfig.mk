@@ -19,7 +19,9 @@ include device/sony/shinano-common/BoardConfigCommon.mk
 #-include vendor/sony/z3/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := D6602,D6603,D6633,D6643,z3
+TARGET_OTA_ASSERT_DEVICE := D6602,D6603,D6633,D6643,z3,leo
+
+PRODUCT_VENDOR_KERNEL_HEADERS := device/sony/shinano/kernel-headers
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/z3/include
 
