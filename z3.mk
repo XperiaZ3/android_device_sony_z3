@@ -64,8 +64,8 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk
 
 # Radio
 ifneq ($(BOARD_HAVE_RADIO),false)
-    DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-radio
-    $(call inherit-product, $(COMMON_PATH)/radio.mk)
+    DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-radio
+    $(call inherit-product, $(LOCAL_PATH)/radio.mk)
 endif
 
 # Include non-opensource parts
