@@ -32,6 +32,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# FM radio
+PRODUCT_PACKAGES += \
+	qcom.fmradio \
+	libqcomfm_jni \
+	FM2 \
+	FMRecord
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -61,12 +68,6 @@ PRODUCT_COPY_FILES += \
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
-
-# Radio
-ifneq ($(BOARD_HAVE_RADIO),false)
-    DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-radio
-    $(call inherit-product, $(LOCAL_PATH)/radio.mk)
-endif
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/z3/z3-vendor.mk)
