@@ -21,8 +21,6 @@ include device/sony/shinano-common/BoardConfigCommon.mk
 # Assert
 TARGET_OTA_ASSERT_DEVICE := D6602,d6602,D6603,d6603,D6633,d6633,D6643,d6643,z3,leo
 
-BOARD_QCOM_HAS_PREBUILT_RIL := true
-
 PRODUCT_VENDOR_KERNEL_HEADERS := device/sony/shinano/kernel-headers
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/z3/include
