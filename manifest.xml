@@ -7,6 +7,9 @@
   <project name="DavidVazGuijarro/android_build" path="build" remote="github" />
   <project name="CyanogenMod/android_kernel_sony_msm8974" path="kernel/sony/msm8974" remote="github" />
   <project name="CyanogenMod/android_device_sony_msm8974-common" path="device/sony/msm8974-common" remote="github" />
+  <remove-project name="CyanogenMod/android_hardware_ril" />
+  <remove-project name="CyanogenMod/android_hardware_ril-caf" />
+  <project name="DavidVazGuijarro/android_hardware_ril" path="hardware/ril" remote="github" />
   <project name="CyanogenMod/android_device_sony_qcom-common" path="device/sony/qcom-common" remote="github" />
   <project name="CyanogenMod/android_hardware_sony_thermanager" path="hardware/sony/thermanager" remote="github" />
   <project name="CyanogenMod/android_device_sony_common" path="device/sony/common" remote="github" />
