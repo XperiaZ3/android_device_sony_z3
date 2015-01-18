@@ -4,11 +4,13 @@ ro.cwm.enable_key_repeat=true
 # Graphics
 ro.sf.lcd_density=480
 
-ro.use_data_netmgrd=true
-
-rild.libpath=/vendor/lib/libril-qc-qmi-1.so
+rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ril.subscription.types=NV,RUIM
+ro.telephony.ril.v3=skippinpukcount,qcomdsds
+ro.telephony.ril_class=SonyRIL
+
+ro.use_data_netmgrd=true
 
 debug.sf.hw=1
 debug.egl.hw=1

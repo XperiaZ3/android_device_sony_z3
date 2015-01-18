@@ -52,6 +52,9 @@ PRODUCT_PACKAGES += \
 # Device specific init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
+    
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.ril.sh:root/init.ril.sh
 
 # USB function switching
 PRODUCT_COPY_FILES += \
