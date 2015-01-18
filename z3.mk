@@ -54,7 +54,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
     
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.ril.sh:root/init.ril.sh
+    $(LOCAL_PATH)/rootdir/init.qcom.ril.path.sh:root/init.qcom.ril.path.sh
+    $(LOCAL_PATH)/rootdir/init.qcom.ril.path.sh:system/etc/init.qcom.ril.path.sh
 
 # USB function switching
 PRODUCT_COPY_FILES += \
