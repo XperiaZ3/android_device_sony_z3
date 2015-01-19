@@ -122,7 +122,7 @@
 		<mitigation level="1"><value resource="backlight">3083</value></mitigation>
 		<mitigation level="2"><value resource="backlight">2055</value></mitigation>
 		<mitigation level="3"><value resource="backlight">1027</value></mitigation>
-		<mitigation level="3"><value resource="backlight">819</value></mitigation>
+		<mitigation level="4"><value resource="backlight">819</value></mitigation>
 	</control>
 
 	<control name="gpu">
